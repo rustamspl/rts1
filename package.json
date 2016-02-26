@@ -1,0 +1,18 @@
+{
+  "name": "rts1",
+  "version": "1.0.0",
+  "description": "pkg build",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rustamspl",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rustamspl/rts1.git"
+  },
+  "dependencies": {
+    "typescript": "^1.8.2"
+  }
+}
