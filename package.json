@@ -16,6 +16,7 @@
     "acorn": "^3.0.4",
     "escodegen": "^1.8.0",
     "estraverse": "^4.1.1",
+    "express": "^4.13.4",
     "typescript": "^1.8.2"
   }
 }
