@@ -44,7 +44,6 @@ function delint(sourceFile) {
             default:
                 break;
         }
-        console.log(node.kind);
         ts.forEachChild(node, delintNode);
     }
     function report(node, message) {
