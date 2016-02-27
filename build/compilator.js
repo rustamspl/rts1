@@ -67,8 +67,11 @@ var TypeScriptSimple = require('typescript-simple').TypeScriptSimple;
 var tss = new TypeScriptSimple({target: ts.ScriptTarget.ES7,experimentalDecorators:true,module:"commonjs"});
 
     function getCode(basedir, data, fn) {
-
-        data=tss.compile(data);
+        console.log(data);
+         data=ts.transpileModule(data,{compilerOptions: { 
+            target: ts.ScriptTarget.ES7,
+             module: ts.ModuleKind.CommonJS
+            }, moduleName: "m"}).outputText;
         console.log(data);    
         var ast = acorn.parse(data, {
             ecmaVersion: 7

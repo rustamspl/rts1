@@ -23,7 +23,7 @@
 
 // var r=new MyClass2().myMethod("testing");
 
-export class Atom {
+export = class Atom {
     r:any;
     constructor() {
 

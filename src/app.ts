@@ -9,6 +9,9 @@ class MyClass {
     myMethod(arg: string) { 
         return "Message -- " + arg;
     }
+    getCb(){
+        return (a)=>{return a**3};
+    }
 }
 
 function log(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
