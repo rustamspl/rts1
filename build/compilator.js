@@ -63,14 +63,15 @@ function compile(getFile, opts) {
     }
 
     //-------------------------------------
+var TypeScriptSimple = require('typescript-simple').TypeScriptSimple;
+var tss = new TypeScriptSimple({target: ts.ScriptTarget.ES7,experimentalDecorators:true,module:"commonjs"});
+
     function getCode(basedir, data, fn) {
 
-        data=ts.transpileModule(data,{compilerOptions: { 
-            target: ts.ScriptTarget.ES5,
-             module: ts.ModuleKind.CommonJS
-            }, moduleName: "m"}).outputText;
+        data=tss.compile(data);
+        console.log(data);    
         var ast = acorn.parse(data, {
-            ecmaVersion: 5
+            ecmaVersion: 7
         });
         var hasExports = false;
 
