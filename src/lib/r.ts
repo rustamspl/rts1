@@ -1,8 +1,6 @@
 
-//import Atom3=require('./lib/r');
-
-class MyClass2 {
-    @log2
+class MyClass3 {
+    @log3
     myMethod(arg: string) { 
         return "Message -- " + arg;
     }
@@ -11,7 +9,7 @@ class MyClass2 {
     }
 }
 
-function log2(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
+function log3(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<any>) {
     var originalMethod = descriptor.value; // save a reference to the original method
 
     // NOTE: Do not use arrow syntax here. Use a function expression in 
@@ -26,8 +24,19 @@ function log2(target: Object, propertyKey: string, descriptor: TypedPropertyDesc
     return descriptor;
 }
 
-export= class Atom {
-    r=new MyClass2();
+export   class Atom3 {
+    r=new MyClass3();
+    constructor() {
+
+    }
+    zzz(){
+        
+    }
+}
+
+
+export   class Atom4 {
+    r=new MyClass3();
     constructor() {
 
     }
